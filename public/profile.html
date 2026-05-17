@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile — GCP FastAPI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="page page-wide">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <span class="brand-name">GCP FastAPI</span>
+      </div>
+
+      <div class="card">
+        <h1>Your profile</h1>
+        <p class="subtitle">Signed in. User data is stored in memory on the API and clears when the server restarts.</p>
+
+        <div id="status-banner" class="message hidden" role="status"></div>
+
+        <section class="profile-section">
+          <h2 class="section-title">Account</h2>
+          <div class="user-card user-card-lg">
+            <img id="avatar" class="avatar avatar-lg hidden" alt="" width="64" height="64" />
+            <div id="avatar-fallback" class="avatar avatar-lg avatar-fallback">?</div>
+            <div class="user-meta">
+              <strong id="user-name">—</strong>
+              <span id="user-email">—</span>
+              <code id="user-id" class="user-id">—</code>
+            </div>
+          </div>
+        </section>
+
+        <section class="profile-section">
+          <div class="section-header">
+            <h2 class="section-title">Registered users</h2>
+            <button type="button" class="btn btn-sm" id="btn-refresh">Refresh</button>
+          </div>
+          <p id="users-hint" class="section-hint">Loading…</p>
+          <ul id="users-list" class="users-list"></ul>
+        </section>
+
+        <div class="actions actions-row">
+          <button type="button" class="btn btn-primary" id="btn-logout">Sign out</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/js/profile.js"></script>
+  </body>
+</html>

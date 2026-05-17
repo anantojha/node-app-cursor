@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard — GCP FastAPI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <span class="brand-name">GCP FastAPI</span>
+      </div>
+
+      <div class="card">
+        <h1>Welcome back</h1>
+        <p class="subtitle">You’re signed in. Your session is stored locally and sent to the API as a Bearer token.</p>
+
+        <div id="status-banner" class="message hidden" role="status"></div>
+
+        <div class="user-card">
+          <img id="avatar" class="avatar hidden" alt="" width="48" height="48" />
+          <div id="avatar-fallback" class="avatar avatar-fallback">?</div>
+          <div class="user-meta">
+            <strong id="user-name">—</strong>
+            <span id="user-email">—</span>
+          </div>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-item">
+            <span class="info-label">User ID</span>
+            <code id="user-id" class="info-value">—</code>
+          </div>
+          <div class="info-item">
+            <span class="info-label">API</span>
+            <code id="api-url" class="info-value">—</code>
+          </div>
+        </div>
+
+        <div class="actions actions-row">
+          <a id="api-docs-link" class="btn" href="#" target="_blank" rel="noopener noreferrer">API docs</a>
+          <button type="button" class="btn btn-primary" id="btn-logout">Sign out</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/js/dashboard.js"></script>
+  </body>
+</html>
